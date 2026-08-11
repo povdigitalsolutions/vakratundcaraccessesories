@@ -72,13 +72,16 @@ export default function EnquiryModal({
     }
     setSending(true);
     try {
+      const productId = selected?.id;
+      const productName = selected?.name || query.trim();
+      const note = message.trim();
       await submitEnquiry({
         name: name.trim(),
         phone: phone.trim(),
         carModel: carModel.trim(),
-        productId: selected?.id || undefined,
-        productName: selected?.name || query || undefined,
-        message: message.trim() || undefined,
+        ...(productId ? { productId } : {}),
+        ...(productName ? { productName } : {}),
+        ...(note ? { message: note } : {}),
       });
       setDone(true);
       setName("");
