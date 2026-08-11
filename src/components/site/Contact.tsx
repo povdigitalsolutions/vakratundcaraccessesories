@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Instagram, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Clock, Camera, MessageCircle } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/config/business";
 import { IMAGES } from "@/config/images";
 import { SectionHeading } from "./SectionHeading";
@@ -58,7 +58,7 @@ export default function Contact({ onQuote }: { onQuote: () => void }) {
               />
               <Item icon={Clock} title="Hours" text={BUSINESS_CONFIG.openingHours} />
               <Item
-                icon={Instagram}
+                icon={Camera}
                 title="Instagram"
                 text={`@${BUSINESS_CONFIG.instagram}`}
                 href={`https://instagram.com/${BUSINESS_CONFIG.instagram}`}

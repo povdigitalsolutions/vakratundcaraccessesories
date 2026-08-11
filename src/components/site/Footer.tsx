@@ -1,4 +1,4 @@
-import { Instagram, Phone, MapPin } from "lucide-react";
+import { Camera, Phone, MapPin } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/config/business";
 import { IMAGES } from "@/config/images";
 
@@ -39,7 +39,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-orange"
           >
-            <Instagram className="h-4 w-4 text-orange" />@{BUSINESS_CONFIG.instagram}
+            <Camera className="h-4 w-4 text-orange" />@{BUSINESS_CONFIG.instagram}
           </a>
         </div>
       </div>
