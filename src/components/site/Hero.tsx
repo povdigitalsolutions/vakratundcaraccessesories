@@ -131,7 +131,7 @@ export default function Hero({ onQuote }: { onQuote: () => void }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="glass absolute -bottom-6 -left-2 hidden rounded-2xl border border-white/10 bg-charcoal/80 px-5 py-4 sm:block lg:-left-10"
+            className="glass absolute -bottom-8 -left-14 hidden rounded-2xl border border-white/10 bg-charcoal/85 px-5 py-4 xl:block"
           >
             <p className="font-display text-3xl text-text-light">8</p>
             <p className="text-xs text-text-muted">accessory categories, one roof</p>
