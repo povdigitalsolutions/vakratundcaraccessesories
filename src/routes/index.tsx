@@ -53,7 +53,6 @@ function Index() {
   return (
     <main className="bg-graphite">
       <Navbar onQuote={openQuote} />
-      <h1 className="sr-only">Vakratund Car Accessories, Somatane — Talegaon Dabhade</h1>
       <Hero onQuote={openQuote} />
       <TrustStrip />
       <CarStory onQuote={openQuote} />
