@@ -4,18 +4,13 @@ import { IMAGES } from "@/config/images";
 import { SectionHeading } from "./SectionHeading";
 
 const categories = [
-  {
-    name: "Interiors",
-    desc: "Seat covers, floor mats, steering wraps",
-    img: IMAGES.seatCovers,
-    size: "wide",
-  },
+  { name: "Interiors", desc: "Seat covers, floor mats, steering wraps", img: IMAGES.seatCovers },
   { name: "Electronics", desc: "Android screens, wiring, locking", img: IMAGES.androidScreens },
   { name: "Lighting", desc: "Projectors, LED, ambient", img: IMAGES.lighting },
   { name: "Audio", desc: "Speakers, amplifiers, tuning", img: IMAGES.audio },
   { name: "Styling", desc: "Steering, exterior detailing", img: IMAGES.steering },
   { name: "Security", desc: "Central locking, safety add-ons", img: IMAGES.wiring },
-  { name: "Wheels", desc: "Alloys, tyres, fitment", img: IMAGES.wheels, size: "wide" },
+  { name: "Wheels", desc: "Alloys, tyres, fitment", img: IMAGES.wheels },
   { name: "Car Care", desc: "Cleaning, detailing, protection", img: IMAGES.arrivalCar },
 ];
 
@@ -40,11 +35,7 @@ export default function Accessories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ delay: (i % 3) * 0.08 }}
-              className={`group relative overflow-hidden rounded-[22px] border border-border-light shadow-soft ${
-                cat.size === "wide"
-                  ? "aspect-[16/11] sm:col-span-2"
-                  : "aspect-[4/5] sm:aspect-[4/3]"
-              }`}
+              className="group relative aspect-[4/3] overflow-hidden rounded-[22px] border border-border-light shadow-soft"
             >
               <img
                 src={cat.img}
