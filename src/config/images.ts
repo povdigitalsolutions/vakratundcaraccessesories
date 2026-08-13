@@ -1,55 +1,55 @@
-import logoAsset from "@/assets/logo.jpg.asset.json";
-import ownerAsset from "@/assets/owner.jpg.asset.json";
-import shopAsset from "@/assets/shopfront.jpg.asset.json";
-import tharAsset from "@/assets/thar-halo.png.asset.json";
-import swiftAsset from "@/assets/swift-arrival.png.asset.json";
-import steeringAsset from "@/assets/steering-wrap.png.asset.json";
-import seatCoverAsset from "@/assets/seatcover-xuv.png.asset.json";
-import installAsset from "@/assets/install-engine.png.asset.json";
-import nightAsset from "@/assets/night-lighting.png.asset.json";
+import logoImg from "@/assets/logo.jpg";
+import ownerImg from "@/assets/owner.jpg";
+import shopImg from "@/assets/shopfront.jpg";
+import tharImg from "@/assets/thar-halo.png";
+import swiftImg from "@/assets/swift-arrival.png";
+import steeringImg from "@/assets/steering-wrap.png";
+import seatCoverImg from "@/assets/seatcover-xuv.png";
+import installImg from "@/assets/install-engine.png";
+import nightImg from "@/assets/night-lighting.png";
 
 /**
  * Centralised image registry. Every entry below is a genuine Vakratund
  * photograph supplied by the business — no stock photography is used.
  */
 export const IMAGES = {
-  logo: logoAsset.url,
-  owner: ownerAsset.url,
-  shop: shopAsset.url,
-  workshop: shopAsset.url,
+  logo: logoImg,
+  owner: ownerImg,
+  shop: shopImg,
+  workshop: shopImg,
 
   // Cars photographed at / by Vakratund
-  heroCar: tharAsset.url,
-  arrivalCar: swiftAsset.url,
-  finalCar: tharAsset.url,
+  heroCar: tharImg,
+  arrivalCar: swiftImg,
+  finalCar: tharImg,
 
   // Work categories
-  seatCovers: seatCoverAsset.url,
-  steering: steeringAsset.url,
-  floorMats: seatCoverAsset.url,
-  androidScreens: installAsset.url,
-  audio: installAsset.url,
-  wiring: installAsset.url,
-  lighting: nightAsset.url,
-  wheels: tharAsset.url,
-  styling: nightAsset.url,
+  seatCovers: seatCoverImg,
+  steering: steeringImg,
+  floorMats: seatCoverImg,
+  androidScreens: installImg,
+  audio: installImg,
+  wiring: installImg,
+  lighting: nightImg,
+  wheels: tharImg,
+  styling: nightImg,
 
   gallery: [
-    { src: tharAsset.url, label: "Thar · halo headlamp build" },
-    { src: seatCoverAsset.url, label: "Mahindra XUV300 · seat cover fitting" },
-    { src: installAsset.url, label: "Front-end electrical install" },
-    { src: nightAsset.url, label: "Exteriors after dark" },
-    { src: steeringAsset.url, label: "Steering wrap · stitched finish" },
-    { src: swiftAsset.url, label: "Swift in the bay" },
-    { src: shopAsset.url, label: "The Somatane shopfront" },
+    { src: tharImg, label: "Thar · halo headlamp build" },
+    { src: seatCoverImg, label: "Mahindra XUV300 · seat cover fitting" },
+    { src: installImg, label: "Front-end electrical install" },
+    { src: nightImg, label: "Exteriors after dark" },
+    { src: steeringImg, label: "Steering wrap · stitched finish" },
+    { src: swiftImg, label: "Swift in the bay" },
+    { src: shopImg, label: "The Somatane shopfront" },
   ],
 
   instagram: [
-    { src: tharAsset.url, type: "reel" as const },
-    { src: seatCoverAsset.url, type: "reel" as const },
-    { src: installAsset.url, type: "reel" as const },
-    { src: steeringAsset.url, type: "reel" as const },
-    { src: nightAsset.url, type: "photo" as const },
-    { src: swiftAsset.url, type: "photo" as const },
+    { src: tharImg, type: "reel" as const },
+    { src: seatCoverImg, type: "reel" as const },
+    { src: installImg, type: "reel" as const },
+    { src: steeringImg, type: "reel" as const },
+    { src: nightImg, type: "photo" as const },
+    { src: swiftImg, type: "photo" as const },
   ],
 } as const;
