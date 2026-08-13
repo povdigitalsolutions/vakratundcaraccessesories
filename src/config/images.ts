@@ -2,6 +2,7 @@ import logoImg from "@/assets/logo.jpg";
 import ownerImg from "@/assets/owner.jpg";
 import shopImg from "@/assets/shopfront.jpg";
 import tharImg from "@/assets/thar-halo.png";
+import HeroImg from "@/assets/defender-hero.jpg";
 import swiftImg from "@/assets/swift-arrival.png";
 import steeringImg from "@/assets/steering-wrap.png";
 import seatCoverImg from "@/assets/seatcover-xuv.png";
@@ -19,7 +20,7 @@ export const IMAGES = {
   workshop: shopImg,
 
   // Cars photographed at / by Vakratund
-  heroCar: tharImg,
+  heroCar: HeroImg,
   arrivalCar: swiftImg,
   finalCar: tharImg,
 

@@ -12,7 +12,7 @@ export const BUSINESS_CONFIG = {
   openingHours: "Mon – Sun · 9:30 AM – 8:30 PM",
 } as const;
 
-export const USE_MOCK_API = true;
+export const USE_MOCK_API = false;
 
 export type Review = {
   name: string;

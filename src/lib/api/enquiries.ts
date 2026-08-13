@@ -10,17 +10,41 @@ export type EnquiryPayload = {
   message?: string;
 };
 
-export async function submitEnquiry(payload: EnquiryPayload): Promise<{ ok: true }> {
+export async function submitEnquiry(
+  payload: EnquiryPayload,
+): Promise<{ ok: true }> {
   if (USE_MOCK_API) {
     await new Promise((resolve) => setTimeout(resolve, 600));
     return { ok: true };
   }
-  const response = await fetch(`${import.meta.env['VITE_API_URL']}/api/public/enquiries`, {
+
+  const apiUrl = import.meta.env["VITE_API_URL"];
+
+  if (!apiUrl) {
+    throw new Error("ERP API URL is not configured");
+  }
+
+  const response = await fetch(`${apiUrl}/api/public/enquiries`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(payload),
   });
-  if (!response.ok) throw new Error("Could not submit enquiry");
+
+  if (!response.ok) {
+    let message = "Could not submit enquiry";
+
+    try {
+      const data = await response.json();
+      if (data?.error) message = data.error;
+    } catch {
+      // Keep default error message
+    }
+
+    throw new Error(message);
+  }
+
   return { ok: true };
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { getFeaturedProducts, productImage, availability, type Product } from "@/lib/api/products";
+import { getFeaturedProducts, productImage, type Product } from "@/lib/api/products";
 import { SectionHeading } from "./SectionHeading";
 
 export default function FeaturedProducts({ onEnquire }: { onEnquire: (p: Product) => void }) {
@@ -42,7 +42,20 @@ export default function FeaturedProducts({ onEnquire }: { onEnquire: (p: Product
               />
             ))}
           {products?.map((p, i) => {
-            const stock = availability(p.stock);
+            const stock = {
+              label:
+                p.stock === 0
+                  ? "Out of stock"
+                  : p.badge === "Limited"
+                    ? "Limited availability"
+                    : "In stock",
+              tone:
+                p.stock === 0
+                  ? "out"
+                  : p.badge === "Limited"
+                    ? "warning"
+                    : "success",
+            };
             return (
               <motion.article
                 key={p.id}
