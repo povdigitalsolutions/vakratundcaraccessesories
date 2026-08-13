@@ -41,7 +41,17 @@ export default function Footer() {
           >
             <Camera className="h-4 w-4 text-orange" />@{BUSINESS_CONFIG.instagram}
           </a>
+
+          
         </div>
+        <a
+  href="https://vakratundacaraccessesories.vercel.app/login"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="ml-2 rounded px-1.5 py-0.5 text-[8px] text-text-muted/30 transition-colors hover:text-orange"
+>
+  ERP
+</a>
       </div>
       <p className="relative mx-auto mt-10 max-w-7xl px-4 text-xs text-text-muted sm:px-6">
         © {new Date().getFullYear()} Vakratund Car Accessories, Somatane · Talegaon Dabhade.
